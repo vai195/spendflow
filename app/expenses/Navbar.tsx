@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import logo from "../public/logo.png";
+import logo from "../../public/logo.png";
 import { Button } from "@/components/ui/button";
-import { AlignJustify, Search } from "lucide-react";
+import { AlignJustify, DollarSign } from "lucide-react";
 
 import {
   DropdownMenu,
@@ -18,7 +18,7 @@ function Navbar() {
         <Link href='/' className='flex items-center gap-1'>
           <Image
             src={logo}
-            alt='Crypto Punk Logo'
+            alt='SpendFlow Logo'
             width={60}
             height={60}
             className='rounded-full'
@@ -26,8 +26,8 @@ function Navbar() {
         </Link>
         <div className='sm:flex flex-wrap items-center gap-2 lg:gap-20 hidden'>
           <Button asChild className='gap-1'>
-            <Link href='/search'>
-              <Search /> Search
+            <Link href='/expenses'>
+              <DollarSign /> Track
             </Link>
           </Button>
         </div>
@@ -41,8 +41,8 @@ function Navbar() {
             </DropdownMenuTrigger>
             <DropdownMenuContent>
               <DropdownMenuItem>
-                <Link href='/search' className='flex items-center gap-3'>
-                  <Search /> <span>Search</span>
+                <Link href='/expenses' className='flex items-center gap-3'>
+                  <DollarSign /> <span>Track</span>
                 </Link>
               </DropdownMenuItem>
             </DropdownMenuContent>
