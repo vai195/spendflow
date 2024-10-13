@@ -9,7 +9,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "SpendFlow AI",
-  description: "",
+  description:
+    "Effortlessly manage your finances with SpendFlow AI, a smart expense tracker that uses AI to streamline budgeting, track spending, and optimize your financial flow.",
 };
 
 export default function RootLayout({

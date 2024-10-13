@@ -1,4 +1,9 @@
+import { Metadata } from "next";
 import Navbar from "./Navbar";
+
+export const metadata: Metadata = {
+  title: "SpendFlow - Expenses",
+};
 
 function layout({ children }: { children: React.ReactNode }) {
   return (
