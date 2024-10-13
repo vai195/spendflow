@@ -1,17 +1,17 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
-import logo from "../../public/logo.png";
-import { Button } from "@/components/ui/button";
-import { AlignJustify, DollarSign } from "lucide-react";
+import logo from "../../public/Designer-removebg-preview.png";
 
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+import { dark } from "@clerk/themes";
+
+import AIChatButton from "@/components/AIChatButton";
+import { UserButton } from "@clerk/nextjs";
+import { useTheme } from "next-themes";
+import ExpenseForm from "@/components/expense-form";
 
 function Navbar() {
+  const { theme } = useTheme();
   return (
     <div className='p-4 shadow'>
       <div className='flex flex-wrap max-w-7xl m-auto gap-3 items-center justify-between '>
@@ -19,20 +19,28 @@ function Navbar() {
           <Image
             src={logo}
             alt='SpendFlow Logo'
-            width={60}
-            height={60}
+            width={70}
+            height={70}
             className='rounded-full'
           />
         </Link>
-        <div className='sm:flex flex-wrap items-center gap-2 lg:gap-20 hidden'>
-          <Button asChild className='gap-1'>
-            <Link href='/expenses'>
-              <DollarSign /> Track
-            </Link>
-          </Button>
+        <div className='flex flex-wrap items-center gap-2'>
+          <ExpenseForm />
+          <AIChatButton />
+          <UserButton
+            appearance={{
+              baseTheme: theme === "dark" ? dark : undefined,
+              elements: {
+                avatarBox: {
+                  width: "2.5rem",
+                  height: "2.5rem",
+                },
+              },
+            }}
+          />
         </div>
 
-        <div className='sm:hidden flex gap-2'>
+        {/* <div className='sm:hidden flex gap-2 '>
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button>
@@ -41,13 +49,14 @@ function Navbar() {
             </DropdownMenuTrigger>
             <DropdownMenuContent>
               <DropdownMenuItem>
-                <Link href='/expenses' className='flex items-center gap-3'>
-                  <DollarSign /> <span>Track</span>
-                </Link>
+                <ExpenseForm />
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <AIChatButton />
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
-        </div>
+        </div> */}
       </div>
     </div>
   );

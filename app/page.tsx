@@ -13,24 +13,23 @@ export default function Home() {
   return (
     <div className='flex flex-col items-center justify-center gap-5 mt-5'>
       <div className='flex flex-col items-center gap-4 text-center'>
-        <Image
-          src={logo}
-          alt='Spend Flow Logo'
-          width={200}
-          height={200}
-        />
+        <Image src={logo} alt='Spend Flow Logo' width={200} height={200} />
         <span className='font-extrabold tracking-tight text-2xl lg:text-4xl'>
           Welcome to SpendFlow AI
         </span>
       </div>
-      <p className='max-w-prose text-center '></p>
+      <p className='max-w-prose text-center '>
+        Effortlessly manage your finances with SpendFlow AI, a smart expense
+        tracker that uses AI to streamline budgeting, track spending, and
+        optimize your financial flow.
+      </p>
       <Button size='lg' asChild className='gap-1'>
         <Link href='/expenses'>
           <DollarSign />
           Get Started
         </Link>
       </Button>
-      <Link href='https://github.com/vai195/spend-flow'>
+      <Link href='https://github.com/vai195/spendflow'>
         <Github />
       </Link>
     </div>

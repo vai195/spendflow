@@ -15,9 +15,9 @@ datasource db {
 
 model Expense{
   id String @id @default(auto()) @map("_id") @db.ObjectId()
-  title String
+  name String
   comment String?
-  amount Int
+  amount Float
   userId String
   created_at DateTime @default(now())
   @@map("expenses")
