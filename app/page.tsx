@@ -1,5 +1,6 @@
 import Image from "next/image";
 import logo from "../public/Designer-removebg-preview.png";
+
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { DollarSign, Github } from "lucide-react";

@@ -23,7 +23,9 @@ function Navbar() {
             height={70}
             className='rounded-full'
           />
+          <span className='font-bold text-2xl'>SpendFlow</span>
         </Link>
+
         <div className='flex flex-wrap items-center gap-2'>
           <ExpenseForm />
           <AIChatButton />
