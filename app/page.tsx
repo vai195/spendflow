@@ -24,7 +24,10 @@ export default function Home() {
           Welcome to SpendFlow AI
         </span>
       </div>
-      <p className='max-w-prose text-center '></p>
+      <p className='max-w-prose text-center '>
+      Effortlessly manage your finances with SpendFlow AI, a smart expense tracker that uses AI to streamline budgeting, 
+      track spending, and optimize your financial flow.
+      </p>
       <Button size='lg' asChild className='gap-1'>
         <Link href='/expenses'>
           <DollarSign />
