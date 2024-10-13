@@ -36,6 +36,8 @@ export async function POST(req: Request) {
     });
 
     const systemMessage: ChatCompletionMessage = {
+      refusal: null,
+
       role: "assistant",
       content:
         "You are an intelligent expense tracker app, You answer the user's questions based on their existing expenses and values they keep track of everyday on this app as well as finance and spending questions in general" +
