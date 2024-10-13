@@ -1,5 +1,5 @@
 import Image from "next/image";
-import logo from "../public/logo.png";
+import logo from "../public/Designer-removebg-preview.png";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { DollarSign, Github } from "lucide-react";
@@ -18,7 +18,6 @@ export default function Home() {
           alt='Spend Flow Logo'
           width={200}
           height={200}
-          className='rounded-full'
         />
         <span className='font-extrabold tracking-tight text-2xl lg:text-4xl'>
           Welcome to SpendFlow AI
