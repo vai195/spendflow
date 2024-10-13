@@ -121,7 +121,7 @@ function ExpenseForm() {
               name='comment'
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Bio</FormLabel>
+                  <FormLabel>Comment</FormLabel>
                   <FormControl>
                     <Textarea
                       placeholder='Talk about your expense'
